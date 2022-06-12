@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Extension Generate_express
- * Plugin URI:      https://github.com/Lightweb-Media/
+ * Plugin URI:      https://github.com/Lightweb-Media/ext_generate_express
  * Description:     Remove first Paragraph from the_content and show it on specific position
  * Author:          Sebastian Weiss & René Kutter
  * Author URI:      https://lightweb-media.de
@@ -44,7 +44,6 @@ function filter_the_content_in_the_main_loop( $content ) {
 }
 
 function add_content_to_action($first_para){
-	    // Check if we're inside the main loop in a single Post.
  if (is_page_template('page-wide-table.php')) { 
 	global $post;
 	$first_para = get_first_para(get_the_content());
